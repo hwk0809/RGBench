@@ -206,12 +206,19 @@ python scripts/compare_to_paper.py outputs/ --metric hd_r2s
 
 ## Visualization
 
-Numbers alone don't tell you whether your simulator drifts in a
-particular direction, jitters at the grasp moment, or misses the
-sleeves entirely. Every benchmark run automatically produces visual
-artifacts next to its `metrics.csv` for side-by-side inspection.
+By default a benchmark run writes only `metrics.csv` (and a `run.log`)
+so batch sweeps stay fast and small on disk. When you want to see
+*what* the simulator is doing — not just the chamfer number — turn on
+the visualization artifacts via Hydra overrides:
 
-By default `make benchmark` writes:
+```bash
+make benchmark SAMPLE=green_tshirt/grasp/02 \
+    active_run.visualization.save_gifs=true \
+    active_run.visualization.save_sim_pcd=true \
+    active_run.visualization.save_target_pcd=true
+```
+
+The cell's output directory then contains:
 
 ```
 outputs/<cell>/<timestamp>/
@@ -221,15 +228,8 @@ outputs/<cell>/<timestamp>/
 └── target_pcd_frames/*.pcd       # per-frame real point cloud (world frame)
 ```
 
-Each cell costs ~5-15 MB of disk. For full-batch runs where you only
-care about the numbers, disable via Hydra:
-
-```bash
-make benchmark-all SIM=pybullet \
-    active_run.visualization.save_gifs=false \
-    active_run.visualization.save_sim_pcd=false \
-    active_run.visualization.save_target_pcd=false
-```
+Cost is ~5–15 MB per cell, almost all of it the per-frame PCDs;
+`save_gifs=true` alone (animation only) is closer to ~0.5 MB.
 
 ### Interactive inspection of saved frames
 

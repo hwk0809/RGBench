@@ -100,18 +100,16 @@ active_run:
 
   # --- Debug/Visualization Options ---
   visualization:
-    # `vis_sim` opens a live Open3D viewer alongside the benchmark; only
-    # turn this on when debugging a single run.
-    vis_sim: false
+    # All visualization is opt-in. Default runs produce just metrics.csv
+    # so batch sweeps don't waste disk on artifacts no one looks at.
+    # Enable per-run via Hydra overrides when you want to inspect one
+    # cell (see docs/CONFIG.md or README "Visualization").
+    vis_sim: false                  # live Open3D viewer; debug single runs
     visualize_every_n_frames: 0     # 0 = never (only relevant when vis_sim: true)
     visualize_pcd_start_time: 0.0
-    # GIFs + per-frame PCDs are saved into the output dir so a
-    # ``make benchmark`` run produces something visually inspectable next
-    # to metrics.csv. Each cell costs ~5-15 MB; turn these off when
-    # running many cells and you only care about numbers.
-    save_gifs: true
-    save_sim_pcd: true
-    save_target_pcd: true
+    save_gifs: false                # animated sim-vs-real GIF in output dir
+    save_sim_pcd: false             # per-frame .pcd files of the simulator output
+    save_target_pcd: false          # per-frame .pcd files of the real point cloud
     gif_fps: 5
     gif_view_plane: ['x', 'y']
 
