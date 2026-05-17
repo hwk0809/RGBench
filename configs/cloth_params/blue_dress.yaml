@@ -1,0 +1,19 @@
+name: "blue_dress"
+cloth_model_file_name: "Blue_Dress/blue_dress_20k.obj"
+cloth_model_usda: "Blue_Dress/blue_dress_20k.usda"
+# appearance properties
+#rgba: [0.56, 0.6, 0.63, 1]
+rgba: [0.741, 0.878, 0.996, 1]
+
+# physical properties of the cloth
+stretch: 900000
+bending: 850
+density: 194
+friction: 0.266
+kinetic_friction: 0.025
+damping: 0.1
+mass: 0.255 # kg //TODO: check mass value
+poisson: 0.35
+
+# key indices for the cloth model
+shoulder_index: [13859, 63]  # indices of the shoulder points

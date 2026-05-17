@@ -1,0 +1,81 @@
+<mujoco model="piper">
+  <compiler meshdir="assets" texturedir="assets" angle="radian" />
+
+    <option timestep="0.002" integrator="implicitfast" viscosity=".3" solver="CG" tolerance="1e-6" iterations="50">
+  <flag energy="enable"/>
+      </option>
+
+<!--  <size njmax="500" nconmax="100" />-->
+
+  <size memory="2000M" />
+
+  <extension>
+    <plugin plugin="mujoco.elasticity.shell"/>
+  </extension>
+
+    <default>
+    <geom solref="0.003 1"/>
+  </default>
+
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="150" elevation="-20" offwidth="1920" offheight="1080"/>
+<!--      <global offwidth="1920" offheight="1080"/>-->
+  </visual>
+
+
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.0"/>
+
+       <material name="left_grab_mat" rgba="0.9 0.1 0.1 0.8"/>
+     <material name="right_grab_mat" rgba="0.1 0.1 0.9 0.8"/>
+
+
+      <material name="cloth_material" rgba="0.5 0.5 0.5 1" specular="0.1" shininess="0.1"/>
+
+
+  </asset>
+
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" size="0.0 0 0.000001" type="plane" pos="0 0 0.0" material="groundplane"/>
+
+      <camera name="video_third_view" pos="1.857 0.103 1.583" xyaxes="-0.011 1.000 0.000 -0.635 -0.007 0.772"/>
+      <camera name="video_grasp_start_view" pos="-0.265 -0.012 0.485" xyaxes="-0.009 -1.000 -0.000 0.716 -0.006 0.698"/>
+
+<!--     cloth -->
+    <flexcomp name="cloth" type="mesh"
+              pos="0.100 -0.000 0.001"
+              quat="1 0 0 0" radius=".0005" dim="2"
+              file="cloth/LargeT_Flat_Simple_5k.obj"
+              material="cloth_material">
+              <contact solref="0.003" selfcollide="none" />
+        <edge equality="true" damping="0.1" />
+        <plugin plugin="mujoco.elasticity.shell">
+           <config key="young" value="230000.00" />
+           <config key="thickness" value="3e-3" />
+           <config key="poisson" value="0.35" />
+      </plugin>
+    </flexcomp>
+
+        <body name="grab_point_body_left" mocap="true" pos="0 0.2 1">
+            <geom type="sphere" size="0.015" material="left_grab_mat" contype="0" conaffinity="0"/>
+            <site name="grab_point_site_left" size="0.01"/>
+        </body>
+
+        <body name="grab_point_body_right" mocap="true" pos="0 -0.2 1">
+            <geom type="sphere" size="0.015" material="right_grab_mat" contype="0" conaffinity="0"/>
+            <site name="grab_point_site_right" size="0.01"/>
+        </body>
+
+  </worldbody>
+
+
+</mujoco>
+

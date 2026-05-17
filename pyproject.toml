@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rgbench"
+version = "0.1.0"
+description = "A cloth sim-to-real gap benchmark with point-cloud evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "RGBench contributors" }]
+keywords = [
+    "cloth simulation",
+    "sim-to-real",
+    "benchmark",
+    "point cloud",
+    "deformable objects",
+    "robot manipulation",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # numpy<2 because roboticstoolbox-python's C extension (fknm) ships
+    # a wheel compiled against the NumPy 1.x ABI on PyPI as of 1.1.x.
+    # Loading rgbench.robot under NumPy 2.x raises
+    # ``ImportError: numpy.core.multiarray failed to import``.
+    "numpy>=1.24,<2",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "open3d>=0.17",
+    "opencv-python>=4.8",
+    "imageio>=2.31",
+    "tqdm>=4.66",
+    "loguru>=0.7",
+    "easydict>=1.10",
+    "omegaconf>=2.3",
+    "hydra-core>=1.3",
+    "pyyaml>=6.0",
+    "psutil>=5.9",
+    "huggingface_hub>=0.20",
+    "point-cloud-utils>=0.30",
+    "torch>=2.0",
+    "roboticstoolbox-python>=1.1",
+    "GitPython>=3.1",
+    # PyKeOps gives a large speedup on the Chamfer metric when CUDA is
+    # available; on CPU-only machines it imports cleanly and the metric
+    # transparently falls back to the SciPy implementation (see
+    # rgbench.metrics.chamfer_distance).
+    "pykeops>=2.1",
+]
+
+[project.optional-dependencies]
+pybullet = ["pybullet>=3.2"]
+mujoco  = ["mujoco>=3.0"]
+segment = [
+    # Used by the real-world point-cloud segmentation pipeline.
+    # GroundingDINO and SAM are pip-installable from their authors' repos.
+    "groundingdino-py>=0.4",
+    "segment-anything>=1.0",
+]
+isaacsim = [
+    # Isaac Sim itself ships its own Python interpreter and cannot be
+    # pip-installed into a normal venv. See requirements-isaacsim.txt
+    # and docs/INSTALL.md.
+]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.1",
+    "build>=1.0",
+]
+all = [
+    "rgbench[pybullet,mujoco,segment,dev]",
+]
+
+[project.urls]
+Homepage   = "https://github.com/hwk0809/RGBench"
+Repository = "https://github.com/hwk0809/RGBench"
+Issues     = "https://github.com/hwk0809/RGBench/issues"
+
+[project.scripts]
+rgbench-download-data = "scripts.download_data:main"
+rgbench-download-checkpoints = "scripts.download_checkpoints:main"
+
+[tool.setuptools.package-dir]
+"" = "."
+
+[tool.setuptools.packages.find]
+include = ["rgbench*", "third_party*"]
+exclude = ["tests*", "data*", "outputs*", "log*"]

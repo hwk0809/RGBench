@@ -1,0 +1,60 @@
+# Configuration for camera
+camera:
+  vis: False
+
+# Parameters for the core segmentation logic
+segment_core:
+  # Maximum ratio of the image that a mask can occupy before being considered background.
+#  max_mask_ratio: 0.132
+  max_mask_ratio: 0.186 # L515 fling
+#  max_mask_ratio: 0.135 # L515 fold
+
+# Configuration for the segmentation model.
+# Checkpoint paths default to third_party/grounded_sam/checkpoints/ inside
+# the repo. The download script (scripts/download_checkpoints.py) places
+# them there. Override RGBENCH_CHECKPOINT_DIR to use a shared cache.
+segmentation:
+    grounding_dino_config_path: "${oc.env:RGBENCH_CHECKPOINT_DIR,${hydra:runtime.cwd}/third_party/grounded_sam/checkpoints}/GroundingDINO_SwinT_OGC.py"
+    grounding_dino_checkpoint_path: "${oc.env:RGBENCH_CHECKPOINT_DIR,${hydra:runtime.cwd}/third_party/grounded_sam/checkpoints}/groundingdino_swint_ogc.pth"
+    sam_encoder_version: "vit_h"
+    sam_checkpoint_path: "${oc.env:RGBENCH_CHECKPOINT_DIR,${hydra:runtime.cwd}/third_party/grounded_sam/checkpoints}/sam_vit_h_4b8939.pth"
+    vis: False
+    save: False
+    classes: ["white cloth"]
+
+# Point cloud post-processing parameters
+postprocessing:
+  visualize_postprocess: False  # Whether to visualize each step of the post-processing
+  enable_denoising: True
+  enable_hole_filling: False
+
+  voxel_size: null
+#  voxel_size: 0.005  # Voxel downsampling size. Set to null or 0.0 to disable.
+
+  # fling: dbscan, fold need statistical
+  # Outlier removal configuration
+  outlier_removal:  # Method can be: "statistical", "radius", or "dbscan"
+    method: "dbscan"
+    # Parameters for the 'statistical' method
+    statistical:
+      nb_neighbors: 30
+      std_ratio: 3.0 # （fling for 0.3）
+    # Parameters for the 'radius' method
+    radius:
+      nb_points: 30
+      radius: 0.02
+    # Parameters for the 'dbscan' method
+    dbscan:
+      eps: 0.02
+      min_points: 15
+
+  # TODO: Need to Adjust
+  # Hole filling configuration
+  hole_filling:
+    alpha: None
+
+
+logging:
+  namespace: experiment_real
+  tag: "debug"
+  path: "${hydra:runtime.cwd}/log"

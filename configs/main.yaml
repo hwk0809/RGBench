@@ -1,0 +1,126 @@
+defaults:
+  - _self_
+  - experiment_library
+  - env: "pybullet"
+  - cloth_params: "green_tshirt"
+
+# --- parameters:---
+params:
+  cloth_name: "green_tshirt"
+  sample_index: "02"
+  sim_environment: "pybullet"  # "pybullet" | "isaacsim" | "mujoco" | "garment_dynamics"
+  action_type: "grasp"         # "grasp" | "fling" | "fold"
+  dynamic_type: "dynamic"      # "dynamic" | "quasi-static"
+  sim_mode: "robot"            # "robot" | "fixed_point"
+  robot: "piper"
+
+# --- Path Configuration ---
+# RGBENCH_DATA_ROOT: real-world captures (downloaded via scripts/download_data.py).
+# RGBENCH_CLOTH_MESH_ROOT: garment OBJ/USDA meshes (downloaded with the dataset).
+# Default to the in-repo sample data so a fresh clone runs out of the box.
+dataset_path: ${oc.env:RGBENCH_DATA_ROOT,${hydra:runtime.cwd}/data/sample}
+cloth_model_path: ${oc.env:RGBENCH_CLOTH_MESH_ROOT,${hydra:runtime.cwd}/data/sample/meshes}
+
+project_root: ${hydra:runtime.cwd}
+output_path: ${hydra:runtime.cwd}/outputs
+
+selected_experiment: ${experiments.${params.cloth_name}.${params.action_type}.${params.robot}.${params.sample_index}}
+
+# --- Automatically generated data and model paths ---
+generated_paths:
+  data_root: ${dataset_path}/${selected_experiment.data_subfolder}
+  cloth_model: ${cloth_model_path}/${cloth_params.cloth_model_file_name}
+  cloth_usda_model: ${cloth_model_path}/${cloth_params.cloth_model_usda}
+#  calibration_path: ${dataset_path}/${params.cloth_name}/calibration
+  calibration_path: ${.data_root}/calibration
+  # specific data path derived from cloth name and sample id
+  pcd_path: ${.data_root}/segment_pcds
+#  left_arm_csv: ${.data_root}/joints/left_arm_joint_states_processed.csv # TODO: confirm naming for new captures
+#  right_arm_csv: ${.data_root}/joints/right_arm_joint_states_processed.csv # TODO: confirm naming for new captures
+#  left_arm_csv: ${.data_root}/joints/left_arm_end_pose_piper.csv # TODO: confirm naming for new captures
+#  right_arm_csv: ${.data_root}/joints/right_arm_end_pose_piper.csv # TODO: confirm naming for new captures
+  left_arm_csv: ${.data_root}/joints/left_arm_joint_states_and_end_pose.csv # TODO: confirm naming for new captures
+  right_arm_csv: ${.data_root}/joints/right_arm_joint_states_and_end_pose.csv # TODO: confirm naming for new captures
+  init_pose_path: ${.data_root}/calibration/initial_object_pose.json
+  init_pose: [0.1, 0.0, 0.01, 1.0, 0.0, 0.0, 0.0] # [x, y, z, Quat], you can set this
+
+# --- Clean Configuration for Active Run ---
+active_run:
+  cloth:
+    name: ${params.cloth_name}
+    sample_id: ${params.sample_index}
+    model_path: ${generated_paths.cloth_model}
+    usda_model_path: ${generated_paths.cloth_usda_model}
+    init_pose: ${generated_paths.init_pose}
+    init_pose_path: ${generated_paths.init_pose_path}
+
+  cloth_params: ${cloth_params}
+
+  sim_model:
+    type: ${params.sim_mode}  # "robot" or "fixed_point"
+    robot: ${params.robot}  # "piper" or "k1"
+
+  env: ${env}
+
+  data:
+    root: ${generated_paths.data_root}
+    pcd: ${generated_paths.pcd_path}
+    robot_joints:
+      left_arm_csv_path: ${generated_paths.left_arm_csv}
+      right_arm_csv_path: ${generated_paths.right_arm_csv}
+    sim_start_time: 0.0  # start simulation at 0.0 seconds
+
+  action:
+    type: ${params.action_type}  # "grasp" or "fling" or "fold"
+    dynamic_type: ${params.dynamic_type}  # "dynamic" or "quasi-static"
+    fling_prepare_time: 5.0  # run to fling start pose
+    fling_wait_time: 5.0 #  wait time before fling action
+
+  # --- Calibration and Camera Configuration ---
+  calibration:
+    path: ${generated_paths.calibration_path}
+    use_refinement: false  # False by default
+
+  camera:
+    # Default values (commented) for common capture frame rates; override
+    # per-experiment via experiment_library.yaml's camera_delay field.
+    #   system_delay_time: 0.0625  # ~16 FPS RealSense capture
+    #   system_delay_time: 0.0333  # ~30 FPS RealSense capture
+    system_delay_time: ${selected_experiment.camera_delay}
+
+    enable_auto_correct_delay: false # True by default, automatically correct the system delay time
+    auto_correct_delay:
+      max_expected_delay_s: 0.5
+      object_axis: 'Y'
+      movement_axis: 'X'
+      feature_match_threshold_m: 0.1
+      fall_back_delay: 0.0  # fallback delay if auto-correction fails
+      motion_threshold_velocity: 0.05 # if motion velocity is below this threshold, use fall_back_delay
+
+
+  # --- Debug/Visualization Options ---
+  visualization:
+    # `vis_sim` opens a live Open3D viewer alongside the benchmark; only
+    # turn this on when debugging a single run.
+    vis_sim: false
+    visualize_every_n_frames: 0     # 0 = never (only relevant when vis_sim: true)
+    visualize_pcd_start_time: 0.0
+    # GIFs + per-frame PCDs are saved into the output dir so a
+    # ``make benchmark`` run produces something visually inspectable next
+    # to metrics.csv. Each cell costs ~5-15 MB; turn these off when
+    # running many cells and you only care about numbers.
+    save_gifs: true
+    save_sim_pcd: true
+    save_target_pcd: true
+    gif_fps: 5
+    gif_view_plane: ['x', 'y']
+
+  evaluate:  ${selected_experiment.evaluate}  # evaluation parameters from the selected experiment
+
+  output:
+    path: ${project_root}/outputs/${params.cloth_name}/${params.action_type}/${params.sim_environment}/${params.sim_mode}/${params.robot}/sample_${params.sample_index}/${now:%Y-%m-%d_%H-%M-%S}
+
+
+hydra:
+  run:
+    dir: ${active_run.output.path}

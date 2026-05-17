@@ -1,0 +1,960 @@
+experiments:
+
+  blue_dress:
+    fling:
+      piper:
+        '01':
+          camera_delay: 0.059880  #1/16.7
+          data_subfolder: blue_dress/blue_dress_fling_2025-07-27-21-35-28
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 4.0
+            start_calculate_time: 0.0
+            end_calculate_time: 3.14           
+        '02':
+          camera_delay: 0.059880   #1/16.7
+          data_subfolder: blue_dress/blue_dress_fling_2025-07-27-21-35-44
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.9
+            start_calculate_time: 0.0
+            end_calculate_time: 3.2            
+        '03':
+          camera_delay: 0.0609756   #1/16.4
+          data_subfolder: blue_dress/blue_dress_fling_2025-07-27-21-35-59
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 2.7
+            start_calculate_time: 0.0
+            end_calculate_time: 2.6
+        '04':
+          camera_delay: 0.059880   #1/16.7
+          data_subfolder: blue_dress/blue_dress_fling_2025-07-27-21-37-10
+          evaluate:
+            start_record_time: 0.05
+            end_record_time: 4.0
+            start_calculate_time: 0.1
+            end_calculate_time: 4.9
+
+    fold:
+      piper:
+        '01':
+          camera_delay: 0.0416666   #1/24  robot
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-17-47-46
+          evaluate:
+            start_record_time: 6.0
+            end_record_time: 12.2
+            start_calculate_time: 7.0
+            end_calculate_time: 11.2
+
+        '02':
+          camera_delay: 0.0420168   #1/23.8
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-17-49-12
+          evaluate:
+            start_record_time: 4.5
+            end_record_time: 12.0
+            start_calculate_time: 6.6
+            end_calculate_time: 11.0  
+
+        '03':
+          camera_delay: 0.045454  #1/22 human
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-14-43-26
+          evaluate:
+            start_record_time: 4.9
+            end_record_time: 13.3
+            start_calculate_time: 5.9
+            end_calculate_time: 12.3
+            
+        '04':
+          camera_delay: 0.04  #1/25  human waide
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-14-44-48
+          evaluate:
+            start_record_time: 5.4
+            end_record_time: 14.1
+            start_calculate_time: 6.4
+            end_calculate_time: 13.1
+            
+        '05':
+          camera_delay: 0.033333 #1/30   human
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-17-41-42
+          evaluate:
+            start_record_time: 4.0
+            end_record_time: 10.5
+            start_calculate_time: 5.0
+            end_calculate_time: 9.7
+
+        '06':
+          camera_delay: 0.033333  #1/30  human
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-17-43-49
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 10.5
+            start_calculate_time: 4.6
+            end_calculate_time: 9.7
+        
+        '07':
+          camera_delay: 0.04   #1/25  human
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-28-17-46-02
+          evaluate:
+            start_record_time: 4.0
+            end_record_time: 10.5
+            start_calculate_time: 5.7
+            end_calculate_time: 9.3
+        '08':
+          camera_delay: 0.060976  #1/16.4
+          data_subfolder: blue_dress/blue_dress_fold_2025-07-19-18-50-00
+          evaluate:
+            start_record_time: 0.5
+            end_record_time: 9.6
+            start_calculate_time: 3.3
+            end_calculate_time: 7.6
+            
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.060976  #1/16.4
+          data_subfolder: blue_dress/blue_dress_grasp_2025-07-19-18-42-48
+          evaluate:
+            start_record_time: 4.0
+            end_record_time: 10.5
+            start_calculate_time: 5.0
+            end_calculate_time: 10.0
+            
+        '02':
+          camera_delay: 0.060976  #1/16.4
+          data_subfolder: blue_dress/blue_dress_grasp_2025-07-19-18-44-51
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 7.5
+            start_calculate_time: 3.5
+            end_calculate_time: 6.8
+            
+        '03':
+          camera_delay: 0.060976  #1/16.4
+          data_subfolder: blue_dress/blue_dress_grasp_2025-07-19-18-46-21
+          evaluate:
+            start_record_time: 2.0
+            end_record_time: 8.0
+            start_calculate_time: 3.3
+            end_calculate_time: 7.9
+            
+  green_tshirt:
+    fling:
+      piper:
+        '01':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_fling_2025-07-19-19-21-02
+          evaluate:
+            start_record_time: 1.0
+            end_record_time: 6.0
+            start_calculate_time: 2.0
+            end_calculate_time: 5.3
+            
+        '02':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_fling_2025-07-19-19-21-13
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 4.0
+            start_calculate_time: 0.1
+            end_calculate_time: 3.0
+            
+        '03':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_fling_2025-07-19-19-21-22
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.4
+            start_calculate_time: 0.1
+            end_calculate_time: 3.5
+            
+    fold:
+      piper:
+        '01':
+          camera_delay: 0.06024  #1/16.6  human waide
+          data_subfolder: green_tshirt/green_tshirt_fold_2025-07-28-18-21-20
+          evaluate:
+            start_record_time: 4.4
+            end_record_time: 10.9
+            start_calculate_time: 5.4
+            end_calculate_time: 9.9
+            
+        '02':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_fold_2025-07-28-18-22-41
+          evaluate:
+            start_record_time: 6.0
+            end_record_time: 12.2
+            start_calculate_time: 7.0
+            end_calculate_time: 11.2
+            
+        '03':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_fold_2025-07-28-18-29-24
+          evaluate:
+            start_record_time: 5.8
+            end_record_time: 13.5
+            start_calculate_time: 6.8
+            end_calculate_time: 12.4
+            
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_grasp_2025-07-19-19-14-03
+          evaluate:
+            start_record_time: 2.0
+            end_record_time: 7.5
+            start_calculate_time: 3.8
+            end_calculate_time: 6.9
+            
+        '02':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_grasp_2025-07-19-19-14-58
+          evaluate:
+            start_record_time: 2.0
+            end_record_time: 8.5
+            start_calculate_time: 4.0
+            end_calculate_time: 7.9
+            
+        '03':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_grasp_2025-07-19-19-16-11
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 9.5
+            start_calculate_time: 4.3
+            end_calculate_time: 8.3
+            
+        '04':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: green_tshirt/green_tshirt_grasp_2025-07-19-19-17-05
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 8.7
+            start_calculate_time: 4.5
+            end_calculate_time: 8.6
+            
+        
+  grey_pleat_skirt:
+    fling:
+      piper:   
+        '01':
+          camera_delay: 0.060976 #1/16.4
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fling_2025-07-27-20-21-35
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.0
+            start_calculate_time: 0.1
+            end_calculate_time: 4.7
+            
+        '02':
+          camera_delay: 0.059524  #1/16.8
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fling_2025-07-27-20-22-47
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.5
+            start_calculate_time: 0.1
+            end_calculate_time: 3.0
+            
+        '03':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fling_2025-07-27-20-23-17
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.9
+            start_calculate_time: 0.1
+            end_calculate_time: 2.5
+        '04':
+          camera_delay: 0.060976  #1/16.4
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fling_2025-07-27-20-24-24
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 6.0
+            start_calculate_time: 1.6
+            end_calculate_time: 4.7
+
+        '05':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fling_2025-07-27-20-24-39
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.0
+            start_calculate_time: 1.5
+            end_calculate_time: 4.5
+
+    fold:
+      piper:
+        '01':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fold_2025-07-28-18-07-21
+          evaluate:
+            start_record_time: 4.5
+            end_record_time: 10.3
+            start_calculate_time: 5.5
+            end_calculate_time: 9.3
+          
+        '02':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fold_2025-07-28-18-09-26
+          evaluate:
+            start_record_time: 5.4
+            end_record_time: 11.0
+            start_calculate_time: 6.4
+            end_calculate_time: 10.6
+          
+        '03':
+          camera_delay: 0.0591716  #1/16.9
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_fold_2025-07-28-18-10-26
+          evaluate:
+            start_record_time: 5.0
+            end_record_time: 10.8
+            start_calculate_time: 6.0
+            end_calculate_time: 10.2   
+
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_grasp_2025-07-27-20-16-18
+          evaluate:
+            start_record_time: 5.5
+            end_record_time: 9.0
+            start_calculate_time: 6.5
+            end_calculate_time: 8.0
+        
+        '02':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_grasp_2025-07-27-20-19-21
+          evaluate:
+            start_record_time: 9.0
+            end_record_time: 15.0
+            start_calculate_time: 10.0
+            end_calculate_time: 14.8
+            
+        '03':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: grey_pleat_skirt/grey_pleat_skirt_grasp_2025-07-27-20-20-21
+          evaluate:
+            start_record_time: 8.0
+            end_record_time: 15.0
+            start_calculate_time: 9.5
+            end_calculate_time: 14.6      
+            
+  white_cakeskirt:
+    fling:
+      piper:
+        '01':
+          camera_delay: 0.47393  #1/21.1
+          data_subfolder: white_cakeskirt/white_cakeskirt_fling_2025-07-27-17-28-09
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.6
+            start_calculate_time: 0.0
+            end_calculate_time: 3.2
+            
+        '02':
+          camera_delay: 0.05  #1/20.0
+          data_subfolder: white_cakeskirt/white_cakeskirt_fling_2025-07-27-17-28-25
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.9
+            start_calculate_time: 0.0
+            end_calculate_time: 3.7
+            
+        '03':
+          camera_delay: 0.049261  #1/20.3
+          data_subfolder: white_cakeskirt/white_cakeskirt_fling_2025-07-27-17-29-47
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 4.0
+            start_calculate_time: 0.0
+            end_calculate_time: 3.7     
+
+        '04':
+          camera_delay: 0.047619  #1/21
+          data_subfolder: white_cakeskirt/white_cakeskirt_fling_2025-07-27-17-32-29
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 4.0
+            start_calculate_time: 1.42
+            end_calculate_time: 4.0
+                                       
+    fold:
+      piper:
+        '01':
+          camera_delay: 0.04  #1/25 robot
+          data_subfolder: white_cakeskirt/white_cakeskirt_fold_2025-07-28-17-38-10
+          evaluate:
+            start_record_time: 9.1
+            end_record_time: 14.8
+            start_calculate_time: 7.0
+            end_calculate_time: 11.5  
+
+        '02':
+          camera_delay: 0.037037  #1/27.0  human
+          data_subfolder: white_cakeskirt/white_cakeskirt_fold_2025-07-28-17-32-08
+          evaluate:
+            start_record_time: 5.0
+            end_record_time: 12.8
+            start_calculate_time: 6.0
+            end_calculate_time: 11.8
+
+        '03':
+          camera_delay: 0.04  #1/25 robot
+          data_subfolder: white_cakeskirt/white_cakeskirt_fold_2025-07-28-17-34-00
+          evaluate:
+            start_record_time: 7.4
+            end_record_time: 14.5
+            start_calculate_time: 8.4
+            end_calculate_time: 13.4
+            
+        '04': 
+          camera_delay: 0.03367  #1/29.7  human
+          data_subfolder: white_cakeskirt/white_cakeskirt_fold_2025-07-28-17-36-17
+          evaluate:
+            start_record_time: 2.5
+            end_record_time: 9.0
+            start_calculate_time: 3.5
+            end_calculate_time: 8.0
+            
+        '05':
+          camera_delay: 0.035714  #1/28
+          data_subfolder: white_cakeskirt/white_cakeskirt_fold_2025-07-28-17-39-24
+          evaluate:
+            start_record_time: 7.0
+            end_record_time: 14.0
+            start_calculate_time: 8.0
+            end_calculate_time: 12.5                 
+
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: white_cakeskirt/white_dress_grasp_2025-07-19-18-56-12
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 9.8
+            start_calculate_time: 4.8
+            end_calculate_time: 8.6
+            
+        '02':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: white_cakeskirt/white_dress_grasp_2025-07-19-18-58-06
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 8.7
+            start_calculate_time: 4.2
+            end_calculate_time: 8.1
+            
+        '03':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: white_cakeskirt/white_dress_grasp_2025-07-19-18-59-14
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 9.5
+            start_calculate_time: 4.7
+            end_calculate_time: 8.3
+            
+        '04':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: white_cakeskirt/white_dress_grasp_2025-07-19-19-00-47
+          evaluate:
+            start_record_time: 2.0
+            end_record_time: 7.5
+            start_calculate_time: 3.5
+            end_calculate_time: 6.8
+            
+        '05':
+          camera_delay: 0.06024  #1/16.6
+          data_subfolder: white_cakeskirt/white_dress_grasp_2025-07-19-19-02-24
+          evaluate:
+            start_record_time: 2.5
+            end_record_time: 8.5
+            start_calculate_time: 3.7
+            end_calculate_time: 7.5
+            
+  white_shirt:
+    fling:
+      piper:
+        '01':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_fling_2025-07-18-20-53-39
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 4.2
+            start_calculate_time: 0.0
+            end_calculate_time: 3.8
+            
+        '02':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_fling_2025-07-18-20-53-53
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.5
+            start_calculate_time: 0.0
+            end_calculate_time: 4.5
+            
+        '03':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_fling_2025-07-18-20-54-05
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.0
+            start_calculate_time: 0.0
+            end_calculate_time: 4.2
+            
+    fold:
+      piper:
+        '01':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_fold_2025-07-28-18-34-10
+          evaluate:
+            start_record_time: 6.5
+            end_record_time: 13.2
+            start_calculate_time: 7.5
+            end_calculate_time: 11.7
+            
+        '02':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_fold_2025-07-28-18-36-00
+          evaluate:
+            start_record_time: 6.5
+            end_record_time: 13.5
+            start_calculate_time: 7.5
+            end_calculate_time: 11.7
+            
+        '03':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_fold_2025-07-28-18-37-24
+          evaluate:
+            start_record_time: 6.3
+            end_record_time: 12.5
+            start_calculate_time: 7.3
+            end_calculate_time: 11.4     
+
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_grasp_2025-07-18-20-44-18
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 15.0
+            start_calculate_time: 9.3
+            end_calculate_time: 14.5
+            
+        '02':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_grasp_2025-07-18-20-45-25
+          evaluate:
+            start_record_time: 7.0
+            end_record_time: 18.0
+            start_calculate_time: 9.3
+            end_calculate_time: 16.0
+            
+        '03':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: white_shirt/white_shirt_grasp_2025-07-18-20-46-46
+          evaluate:
+            start_record_time: 6.5
+            end_record_time: 13.9
+            start_calculate_time: 8.5
+            end_calculate_time: 12.9
+            
+  brown_coat:
+    fling:
+      piper:
+        '01':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: brown_coat/brown_coat_fling_2025-07-21-16-00-45
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.0
+            start_calculate_time: 0.0
+            end_calculate_time: 4.13
+            
+        '02':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: brown_coat/brown_coat_fling_2025-07-21-16-00-59
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.0
+            start_calculate_time: 0.0
+            end_calculate_time: 3.8
+            
+        '03':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: brown_coat/brown_coat_fling_2025-07-21-16-01-11
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 5.0
+            start_calculate_time: 0.0
+            end_calculate_time: 3.34
+            
+    fold:
+      piper:
+        '01':
+          camera_delay: 0.06024   #1/16.6  robot
+          data_subfolder: brown_coat/brown_coat_fold_2025-07-28-17-56-25
+          evaluate:
+            start_record_time: 5.0
+            end_record_time: 10.8
+            start_calculate_time: 6.0
+            end_calculate_time: 9.8
+
+        '02':
+          camera_delay: 0.052631   #1/19.0  human waide
+          data_subfolder: brown_coat/brown_coat_fold_2025-07-28-17-52-15
+          evaluate:
+            start_record_time: 7.5
+            end_record_time: 14.4
+            start_calculate_time: 8.5
+            end_calculate_time: 14.2
+            
+        '03':
+          camera_delay: 0.06024   #1/16.6  human
+          data_subfolder: brown_coat/brown_coat_fold_2025-07-28-17-54-16
+          evaluate:
+            start_record_time: 2.9
+            end_record_time: 9.7
+            start_calculate_time: 3.9
+            end_calculate_time: 8.7
+
+        '04':
+          camera_delay: 0.06024   #1/16.6  robot waide
+          data_subfolder: brown_coat/brown_coat_fold_2025-07-28-17-59-34
+          evaluate:
+            start_record_time: 6.0
+            end_record_time: 12.3
+            start_calculate_time: 7.0
+            end_calculate_time: 11.3
+
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.050251  #1/19.0
+          data_subfolder: brown_coat/brown_coat_grasp_2025-07-21-15-53-00
+          evaluate:
+            start_record_time: 1.0
+            end_record_time: 5.5
+            start_calculate_time: 1.4
+            end_calculate_time: 5.0
+            
+        '02':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: brown_coat/brown_coat_grasp_2025-07-21-15-54-20
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 10.3
+            start_calculate_time: 5.5
+            end_calculate_time: 9.8
+            
+        '03':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: brown_coat/brown_coat_grasp_2025-07-21-15-55-44
+          evaluate:
+            start_record_time: 3.0
+            end_record_time: 10.5
+            start_calculate_time: 5.0
+            end_calculate_time: 9.7
+
+  beige_hoodie:
+    fling:
+      piper:
+        '01':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: beige_hoodie/beige_hoodie_fling_2025-07-18-17-55-01
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.8
+            start_calculate_time: 0.0
+            end_calculate_time: 3.7
+            
+        '02':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: beige_hoodie/beige_hoodie_fling_2025-07-18-17-55-11
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 4.2
+            start_calculate_time: 0.0
+            end_calculate_time: 3.5
+            
+        '03':
+          camera_delay: 0.06024   #1/16.6
+          data_subfolder: beige_hoodie/beige_hoodie_fling_2025-07-18-17-55-22
+          evaluate:
+            start_record_time: 0.0
+            end_record_time: 3.8
+            start_calculate_time: 0.0
+            end_calculate_time: 3.7
+            
+    fold:
+      piper:      
+        '01':
+          camera_delay: 0.038461  #1/26.0 human
+          data_subfolder: beige_hoodie/beige_hoodie_fold_2025-07-28-18-15-54
+          evaluate:
+            start_record_time: 5.0
+            end_record_time: 10.8
+            start_calculate_time: 6.0
+            end_calculate_time: 9.9
+              
+        '02':
+          camera_delay: 0.038461  #1/26.0  robot
+          data_subfolder: beige_hoodie/beige_hoodie_fold_2025-07-28-18-17-38
+          evaluate:
+            start_record_time: 7.0
+            end_record_time: 13.0
+            start_calculate_time: 8.0
+            end_calculate_time: 12.1   
+
+        '03':
+          camera_delay: 0.038461  #1/26.0  robot 
+          data_subfolder: beige_hoodie/beige_hoodie_fold_2025-07-28-18-19-16
+          evaluate:
+            start_record_time: 7.0
+            end_record_time: 13.0
+            start_calculate_time: 8.0
+            end_calculate_time: 12.2
+
+        '04':
+          camera_delay: 0.038461  #1/26.0 human
+          data_subfolder: beige_hoodie/beige_hoodie_fold_2025-07-28-18-13-17
+          evaluate:
+            start_record_time: 5.0
+            end_record_time: 12.5
+            start_calculate_time: 6.1
+            end_calculate_time: 11.3
+
+    grasp:
+      piper:
+        '01':
+          camera_delay: 0.0333333   #1/30
+          data_subfolder: beige_hoodie/beige_hoodie_grasp_2025-07-18-17-33-48
+          evaluate:
+            start_record_time: 6.0
+            end_record_time: 16.0
+            start_calculate_time: 8.6
+            end_calculate_time: 14.8
+            
+        '02':
+          camera_delay: 0.0384615   #1/26
+          data_subfolder: beige_hoodie/beige_hoodie_grasp_2025-07-18-17-37-37
+          evaluate:
+            start_record_time: 9.0
+            end_record_time: 18.0
+            start_calculate_time: 11.5
+            end_calculate_time: 16.8
+        '03':
+          camera_delay: 0.0625  #1/16
+          data_subfolder: beige_hoodie/beige_hoodie_grasp_2025-07-18-17-42-27
+          evaluate:
+            start_record_time: 12.0
+            end_record_time: 20.0
+            start_calculate_time: 14.0
+            end_calculate_time: 18.8
+
+
+  khaki_blazer:
+     fling:
+       piper:
+         '01':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_fling_2025-07-19-18-31-44
+           evaluate:
+             start_record_time: 0.0
+             end_record_time: 3.8
+             start_calculate_time: 0.0
+             end_calculate_time: 2.6
+
+         '02':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_fling_2025-07-19-18-31-53
+           evaluate:
+             start_record_time: 0.0
+             end_record_time: 3.9
+             start_calculate_time: 0.0
+             end_calculate_time: 2.7
+
+         '03':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_fling_2025-07-19-18-32-01
+           evaluate:
+             start_record_time: 0.0
+             end_record_time: 5.0
+             start_calculate_time: 0.0
+             end_calculate_time: 3.8
+
+     fold:
+       piper:
+         '01':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_fold_2025-07-19-18-29-10
+           evaluate:
+             start_record_time: 1.5
+             end_record_time: 10.5
+             start_calculate_time: 3.2
+             end_calculate_time: 9.1
+
+         '02':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_fold_2025-07-19-18-29-58
+           evaluate:
+             start_record_time: 3.0
+             end_record_time: 11.5
+             start_calculate_time: 5.5
+             end_calculate_time: 10.3
+
+         '03':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_fold_2025-07-19-18-31-00
+           evaluate:
+             start_record_time: 1.0
+             end_record_time: 8.0
+             start_calculate_time: 2.5
+             end_calculate_time: 6.8
+
+     grasp:
+       piper:
+         '01':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_grasp_2025-07-19-18-24-01
+           evaluate:
+             start_record_time: 2.0
+             end_record_time: 8.5
+             start_calculate_time: 4.3
+             end_calculate_time: 8.3
+
+         '02':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_grasp_2025-07-19-18-24-57
+           evaluate:
+             start_record_time: 3.0
+             end_record_time: 9.3
+             start_calculate_time: 4.0
+             end_calculate_time: 7.7
+
+         '03':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_grasp_2025-07-19-18-26-27
+           evaluate:
+             start_record_time: 1.0
+             end_record_time: 7.5
+             start_calculate_time: 3.0
+             end_calculate_time: 6.8
+
+         '04':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_grasp_2025-07-19-18-27-26
+           evaluate:
+             start_record_time: 2.5
+             end_record_time: 8.0
+             start_calculate_time: 3.6
+             end_calculate_time: 7.0
+
+         '05':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: khaki_blazer/blazer_grasp_2025-07-19-18-28-21
+           evaluate:
+             start_record_time: 1.0
+             end_record_time: 6.0
+             start_calculate_time: 2.4
+             end_calculate_time: 5.0
+
+  grey_sunwear:
+     fling:
+       piper:
+         '01':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_fling_2025-07-19-18-04-35
+           evaluate:
+             start_record_time: 0.0
+             end_record_time: 4.5
+             start_calculate_time: 0.0
+             end_calculate_time: 3.9
+
+         '02':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_fling_2025-07-19-18-04-52
+           evaluate:
+             start_record_time: 0.0
+             end_record_time: 6.0
+             start_calculate_time: 0.0
+             end_calculate_time: 4.6
+
+         '03':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_fling_2025-07-19-18-05-04
+           evaluate:
+             start_record_time: 0.0
+             end_record_time: 3.9
+             start_calculate_time: 0.0
+             end_calculate_time: 3.9
+
+     fold:
+       piper:
+         '01':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_fold_2025-07-19-18-00-32
+           evaluate:
+             start_record_time: 6.0
+             end_record_time: 15.0
+             start_calculate_time: 7.5
+             end_calculate_time: 11.0
+
+         '02':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_fold_2025-07-19-18-02-01
+           evaluate:
+             start_record_time: 3.0
+             end_record_time: 12.0
+             start_calculate_time: 4.3
+             end_calculate_time: 8.0
+
+         '03':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_fold_2025-07-19-18-03-11
+           evaluate:
+             start_record_time: 5.0
+             end_record_time: 13.0
+             start_calculate_time: 7.0
+             end_calculate_time: 10.7
+
+     grasp:
+       piper:
+         '01':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_grasp_2025-07-19-17-47-32
+           evaluate:
+             start_record_time: 4.0
+             end_record_time: 12.5
+             start_calculate_time: 7.6
+             end_calculate_time: 11.5
+
+         '02':
+           camera_delay: 0.06024  #1/16.6
+           data_subfolder: grey_sunwear/sunwear_grasp_2025-07-19-17-49-04
+           evaluate:
+             start_record_time: 2.8
+             end_record_time: 10.5
+             start_calculate_time: 4.8
+             end_calculate_time: 9.5
+
+  #       '03':
+  #         camera_delay: 0.06024  #1/16.6
+  #         data_subfolder: grey_sunwear/sunwear_grasp_2025-07-19-17-55-56
+  #         evaluate:
+  #           start_record_time: 3.0
+  #           end_record_time: 11.0
+  #           start_calculate_time: 4.3
+  #           end_calculate_time: 9.8
+
+  #       '04':
+  #         camera_delay: 0.06024  #1/16.6
+  #         data_subfolder: grey_sunwear/sunwear_grasp_2025-07-19-17-58-47
+  #         evaluate:
+  #           start_record_time: 3.0
+  #           end_record_time: 11.0
+  #           start_calculate_time: 5.3
+  #           end_calculate_time: 9.1

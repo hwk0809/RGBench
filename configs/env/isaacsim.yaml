@@ -1,0 +1,9 @@
+name: isaacsim
+friction: 0.102
+damping: 0
+stretch_stiffness: 370000
+bend_stiffness: 2090
+piper_usda: "${project_root}/assets/isaacsim_assets/Robot/piper_usd/piper_urdf.usda"
+physics_timestep: 0.002
+rendering_timestep: 0.002
+enable_gripper_calibrate: false

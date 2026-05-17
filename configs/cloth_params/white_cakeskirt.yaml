@@ -1,0 +1,20 @@
+name: "white_cakeskirt"
+#cloth_model_file_name: "White_CakeSkirt/CakeSkirt_Flat_Simple_30k.obj"
+cloth_model_file_name: "White_CakeSkirt/white_cakeskirt_40k.obj"
+cloth_model_usda: "White_CakeSkirt/white_cakeskirt_40k.usda"
+# appearance properties
+rgba: [0.97, 0.97, 1.0, 1.0]
+
+# physical properties of the cloth
+stretch: 1000000
+bending: 1000
+density: 135
+friction: 0.266
+kinetic_friction: 0.025
+damping: 0.1
+mass: 0.255 # kg
+poisson: 0.35
+
+# key indices for the cloth model
+shoulder_index: [9694,9782] # 40k
+#shoulder_index: [6807,6879] # 30k

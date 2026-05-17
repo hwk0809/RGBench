@@ -1,0 +1,33 @@
+# Pinned versions for reproducibility. Prefer `pip install -e .[all]` from
+# pyproject.toml; this file is the fallback for environments that cannot
+# parse PEP 621 (e.g. some CI tooling).
+
+# Core
+numpy==1.26.4
+scipy==1.11.4
+pandas==2.1.4
+matplotlib==3.8.2
+open3d==0.18.0
+opencv-python==4.9.0.80
+imageio==2.34.0
+tqdm==4.66.2
+loguru==0.7.2
+easydict==1.11
+omegaconf==2.3.0
+hydra-core==1.3.2
+pyyaml==6.0.1
+psutil==5.9.7
+huggingface_hub==0.20.3
+point-cloud-utils==0.31.0
+torch==2.2.1
+roboticstoolbox-python==1.1.1
+GitPython==3.1.42
+
+# Simulators
+pybullet==3.2.6
+mujoco==3.1.4
+
+# Segmentation pipeline (required only for tools/segment_cloth_pcd.py)
+groundingdino-py==0.4.0
+segment-anything==1.0
+pykeops==2.2.2

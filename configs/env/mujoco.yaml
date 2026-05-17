@@ -1,0 +1,22 @@
+name: "mujoco"
+timestep: 0.002
+sim_flex_name: "cloth"
+
+# robot model path
+model_path: ${project_root}/assets/mujoco_model/FlexCloth_Piper.xml
+# fixed point model path
+fixed_point_model_path: ${project_root}/assets/mujoco_model/FlexCloth_Fixed_Point.xml
+
+# this will be used only in the fixed_point mode
+# grasp:
+grasp:
+    enabled: True  # Enable pinning of cloth vertices
+    grab_time: 9.5  # Time when the left arm grabs the cloth
+    mode: 'auto'  # 'auto' or 'manual'
+    indices: [2457, 2098] # Only used if mode is 'manual'
+
+# fling:
+fling:
+    initial_grasp_duration: 3.0  # time to hold the cloth before fling
+    pre_fling_wait_time: 2.0  # wait time before fling action
+

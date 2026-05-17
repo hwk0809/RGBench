@@ -1,0 +1,3 @@
+name: pybullet
+sim_timestep: 0.002
+model_path: ${project_root}/assets/piper_description/piper_with_gripper.urdf

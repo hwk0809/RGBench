@@ -1,0 +1,18 @@
+name: "brown_coat"
+cloth_model_file_name: "Brown_Coat/brown_coat_33k.obj"
+cloth_model_usda: "Brown_Coat/brown_coat_33k.usda"
+# appearance properties
+rgba: [0.53, 0.43, 0.35, 1]
+
+# physical properties of the cloth
+stretch: 1000000
+bending: 23596.87
+density: 406.06
+friction: 0.266
+kinetic_friction: 0.025
+damping: 0.1
+mass: 0.255 # kg //TODO: check mass value
+poisson: 0.35
+
+# key indices for the cloth model
+shoulder_index: [6545, 20316]  # indices of the shoulder points

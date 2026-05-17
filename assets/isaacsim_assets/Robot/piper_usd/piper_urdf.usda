@@ -1,0 +1,48 @@
+#usda 1.0
+(
+    defaultPrim = "piper"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "piper" (
+    variants = {
+        string Physics = "PhysX"
+        string Sensor = "Sensors"
+    }
+    prepend variantSets = ["Physics", "Sensor"]
+)
+{
+    quatd xformOp:orient = (1, 0, 0, 0)
+    double3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    variantSet "Physics" = {
+        "None" (
+            prepend references = @configuration/piper_with_gripper_base.usda@
+        ) {
+            over "joints" (
+                active = false
+            )
+            {
+            }
+
+        }
+        "PhysX" (
+            prepend payload = @configuration/piper_with_gripper_physics.usda@
+        ) {
+
+        }
+    }
+    variantSet "Sensor" = {
+        "None" {
+
+        }
+        "Sensors" (
+            prepend payload = @configuration/piper_with_gripper_sensor.usda@
+        ) {
+
+        }
+    }
+}
+

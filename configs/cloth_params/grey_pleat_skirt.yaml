@@ -1,0 +1,18 @@
+name: grey_pleat_skirt
+cloth_model_file_name: "Grey_Pleat_Skirt/grey_pleat_skirt_20k.obj"
+cloth_model_usda: "Grey_Pleat_Skirt/grey_pleat_skirt_20k.usda"
+# appearance properties
+rgba: [0.337, 0.3, 0.259, 1.0]
+
+# physical properties of the cloth
+stretch: 1000000
+bending: 1235.33
+density: 228.79
+friction: 0.266
+kinetic_friction: 0.025
+damping: 0.1
+mass: 0.255 
+
+
+# key indices for the cloth model
+shoulder_index: [155, 9799]

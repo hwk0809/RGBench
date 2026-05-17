@@ -1,0 +1,22 @@
+name: "green_tshirt"
+cloth_model_file_name: "Green_Tshirt/green_tshirt_10k.obj"
+cloth_model_usda: "Green_Tshirt/green_tshirt_10k.usda"
+# appearance properties
+rgba: [0.0845, 0.4399, 0.3615, 1]
+
+# physical properties of the cloth
+stretch: 230000
+bending: 1000
+# stretch: [7.5e4,2.0e5, 2.0e4]  # stretch stiffness in the (u, v, w) directions
+# bending: [1e3, 2e3, 1.5e3]
+density: 220
+friction: 0.6
+kinetic_friction: 0.6
+ground_friction: 0.266
+ground_kinetic_friction: 0.025
+damping: 0.1
+mass: 0.255 # kg
+poisson: 0.35
+
+# key indices for the cloth model
+shoulder_index: [185, 76]  # indices of the shoulder points

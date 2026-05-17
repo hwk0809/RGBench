@@ -1,0 +1,31 @@
+# Generated / downloaded artifacts
+log/
+logs/
+outputs/
+opt/
+
+# Real-world captures and reference results download here; tracked README
+# explains the expected structure.
+data/*
+!data/sample/
+data/sample/*
+!data/sample/README.md
+
+# Pre-trained model checkpoints (downloaded by scripts/download_checkpoints.py)
+third_party/grounded_sam/checkpoints/*
+!third_party/grounded_sam/checkpoints/.gitkeep
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# Capture file types we never want in the repo
+*.bag
+*.rosbag
+
+# Editor / IDE
+.idea/
+.vscode/

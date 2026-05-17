@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+title: "Real Garment Benchmark (RGBench): A Comprehensive Benchmark for Robotic Garment Manipulation featuring a High-Fidelity Scalable Simulator"
+message: "If you use RGBench in your research, please cite the AAAI 2026 paper."
+type: software
+authors:
+  - given-names: "Wenkang"
+    family-names: "Hu"
+    affiliation: "Shanghai Jiao Tong University"
+  - given-names: "Xincheng"
+    family-names: "Tang"
+    affiliation: "Shanghai Jiao Tong University"
+  - given-names: "Yanzhi"
+    family-names: "E"
+    affiliation: "Style3D Research"
+  - given-names: "Yitong"
+    family-names: "Li"
+    affiliation: "Shanghai Jiao Tong University"
+  - given-names: "Zhengjie"
+    family-names: "Shu"
+    affiliation: "Shanghai Jiao Tong University"
+  - given-names: "Wei"
+    family-names: "Li"
+    affiliation: "Nanjing University"
+  - given-names: "Huamin"
+    family-names: "Wang"
+    affiliation: "Style3D Research"
+  - given-names: "Ruigang"
+    family-names: "Yang"
+    affiliation: "Shanghai Jiao Tong University"
+license: MIT
+license-url: "https://github.com/hwk0809/RGBench/blob/main/LICENSE"
+repository-code: "https://github.com/hwk0809/RGBench"
+url: "https://rgbench.github.io/"
+keywords:
+  - cloth simulation
+  - sim-to-real
+  - benchmark
+  - point cloud
+  - robot manipulation
+  - garment manipulation
+  - deformable objects
+preferred-citation:
+  type: conference-paper
+  title: "Real Garment Benchmark (RGBench): A Comprehensive Benchmark for Robotic Garment Manipulation featuring a High-Fidelity Scalable Simulator"
+  authors:
+    - given-names: "Wenkang"
+      family-names: "Hu"
+    - given-names: "Xincheng"
+      family-names: "Tang"
+    - given-names: "Yanzhi"
+      family-names: "E"
+    - given-names: "Yitong"
+      family-names: "Li"
+    - given-names: "Zhengjie"
+      family-names: "Shu"
+    - given-names: "Wei"
+      family-names: "Li"
+    - given-names: "Huamin"
+      family-names: "Wang"
+    - given-names: "Ruigang"
+      family-names: "Yang"
+  collection-title: "Proceedings of the AAAI Conference on Artificial Intelligence"
+  collection-type: "proceedings"
+  year: 2026
+  url: "https://rgbench.github.io/"

@@ -1,0 +1,24 @@
+# Dependencies for running RGBench under Isaac Sim's bundled Python.
+#
+# Use:
+#   $ ~/isaacsim/python.sh -m pip install -r requirements-isaacsim.txt
+#
+# Isaac Sim cannot be installed via pip — install it from NVIDIA's
+# Omniverse Launcher first, then run the line above. Note that Isaac Sim
+# ships its own NumPy/Torch/etc. so this list is intentionally short and
+# only includes packages Isaac Sim doesn't already provide.
+
+numpy
+scipy
+pandas
+open3d
+opencv-python
+imageio
+tqdm
+loguru
+easydict
+omegaconf
+hydra-core
+pyyaml
+huggingface_hub
+point-cloud-utils
