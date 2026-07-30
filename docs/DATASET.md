@@ -1,7 +1,7 @@
 # Dataset
 
 The RGBench Cloth Sim-to-Real dataset lives on Hugging Face:
-[`hwk0809/RGBench-Cloth-Sim2Real-v1`](https://huggingface.co/datasets/hwk0809/RGBench-Cloth-Sim2Real-v1).
+[`RGBench/RGBench-Cloth-Sim2Real-v1`](https://huggingface.co/datasets/RGBench/RGBench-Cloth-Sim2Real-v1).
 The git repo only carries the benchmark code; the actual real-world
 captures and the cloth meshes are downloaded from HF.
 
@@ -273,7 +273,7 @@ PR a follow-on dataset version when you have a coherent batch.
 
 ## Versioning
 
-The repo id is `hwk0809/RGBench-Cloth-Sim2Real-v1`. For breaking changes
+The repo id is `RGBench/RGBench-Cloth-Sim2Real-v1`. For breaking changes
 (new captures, recalibration, different mesh decimation) we'll bump the
 suffix (`v2`, `v3`, ...) so existing papers that cite v1 stay
 reproducible. Hugging Face datasets are git-versioned, so any specific

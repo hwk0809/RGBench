@@ -62,7 +62,7 @@ Then create a `configs/env/my_sim.yaml` that mirrors the existing
 | Isaac Sim | [`rgbench/envs/isaacsim/cloth_isaacsim_env.py`](../rgbench/envs/isaacsim/cloth_isaacsim_env.py) | Particle-cloth on USD assets |
 | plain MuJoCo | [`rgbench/envs/mujoco/cloth_mujoco_env_fixed_point.py`](../rgbench/envs/mujoco/cloth_mujoco_env_fixed_point.py) | Native MuJoCo flex, fixed-point end-effector control |
 
-A fourth slot exists for the closed-source **GarmentDynamics** simulator
+A fourth slot exists for the not-yet-released **GarmentDynamics** simulator
 via a lazy import:
 
 ```python

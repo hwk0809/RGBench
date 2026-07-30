@@ -14,14 +14,19 @@ quantifies that gap** with carefully measured real garment dynamics.
 
 ## What this repository releases
 
-This release ships the **evaluation half** of the AAAI 2026 paper:
+This release ships the **evaluation half** of the AAAI 2026 paper, plus a
+first slice of the garment asset library:
 
 - ✅ **9 garments with real-world ground truth** —
-  [`hwk0809/RGBench-Cloth-Sim2Real-v1`](https://huggingface.co/datasets/hwk0809/RGBench-Cloth-Sim2Real-v1)
+  [`RGBench/RGBench-Cloth-Sim2Real-v1`](https://huggingface.co/datasets/RGBench/RGBench-Cloth-Sim2Real-v1)
   (6.7 GB on Hugging Face, CC-BY 4.0). Each garment is captured under
   three bimanual manipulation actions (fling / fold / grasp), with
   segmented point clouds, robot joint + end-effector CSVs, camera
   calibration, and the matching cloth meshes at multiple resolutions.
+- ✅ **Industrial-grade garment assets** —
+  [`RGBench/garment_assets`](https://huggingface.co/datasets/RGBench/garment_assets)
+  (OBJ + Style3D formats), a research subset of the garment asset library.
+  For access to the full library, contact **wanghmin@gmail.com**.
 - ✅ **An open-source evaluation harness** with two reference simulator
   wrappers ([PyBullet](rgbench/envs/pybullet/),
   [Isaac Sim](rgbench/envs/isaacsim/)) and a clean
@@ -273,16 +278,17 @@ garment** and **adding a new simulator**.
 
 ## Roadmap
 
-This release covers the **evaluation half** of the AAAI 2026 paper.
-Coming next:
+This release covers the **evaluation half** of the AAAI 2026 paper, plus a
+first slice of the garment asset library. Coming next:
 
 - 🚧 **GarmentDynamics simulator** — the high-fidelity cloth simulator
   from Section 3 of the paper is being prepared for open release as a
   separate project. Its published baseline numbers already ship in
   [`results/paper_baselines.csv`](results/paper_baselines.csv) so any
   new simulator can be ranked against it today.
-- 🚧 **6 000+ garment-mesh asset library** — the broader 3D garment
-  dataset described in Section 2 will follow in a subsequent release.
+- 🚧 **Garment asset tooling** — mesh and physical-parameter parsers for
+  the released garment assets, plus post-processing that prepares them
+  for use in physics simulators.
 - 💡 **More capture platforms** — current data is from a Piper bimanual
   gripper; the codebase has a K1 humanoid wrapper but no captures yet.
 
@@ -290,10 +296,15 @@ Contributions for new simulators, new garments, and new captures are
 welcome via pull request; see [`docs/CONFIG.md`](docs/CONFIG.md) and
 [`docs/ADDING_A_SIMULATOR.md`](docs/ADDING_A_SIMULATOR.md).
 
-## Dataset
+## Datasets
+
+RGBench publishes two datasets on Hugging Face: the **Sim2Real captures**
+used to run the benchmark, and a **garment asset library**.
+
+### Sim2Real capture dataset
 
 The Hugging Face dataset
-[`hwk0809/RGBench-Cloth-Sim2Real-v1`](https://huggingface.co/datasets/hwk0809/RGBench-Cloth-Sim2Real-v1)
+[`RGBench/RGBench-Cloth-Sim2Real-v1`](https://huggingface.co/datasets/RGBench/RGBench-Cloth-Sim2Real-v1)
 (6.7 GB, CC-BY 4.0) bundles **everything needed to run the benchmark**:
 
 - **Real captures** — 98 capture sessions across 9 garments × 3 actions
@@ -326,6 +337,21 @@ Cloth meshes always come from the HF dataset.
 
 Format details and per-capture structure are documented in
 [`docs/DATASET.md`](docs/DATASET.md).
+
+### Garment asset library
+
+[`RGBench/garment_assets`](https://huggingface.co/datasets/RGBench/garment_assets)
+hosts a **research subset** of the industrial garment asset library, in
+**OBJ and Style3D formats**. The Style3D files carry measured physical
+parameters (stretch / bending stiffness, area density, thickness). These are
+source assets released without simulator-specific preprocessing; parsers and
+post-processing scripts are on the [roadmap](#roadmap) above.
+
+This subset is released under the RGBench Project-Specific **Non-Commercial**
+Research License — note this differs from the CC-BY 4.0 capture data above.
+The full industrial asset library (4,000+ models) is not part of this release;
+for access, or to discuss research collaboration and data licensing, contact
+**wanghmin@gmail.com**
 
 ## Paper baselines and comparing your simulator
 
@@ -396,10 +422,18 @@ A worked example lives in
 
 ## License
 
-Code is released under the [MIT License](LICENSE). The Hugging Face
-dataset is released under [CC-BY 4.0](DATA_LICENSE). Robot URDFs
-redistributed in `assets/Urdf/` carry their upstream licenses; see the
-per-directory LICENSE / NOTICE files where applicable.
+RGBench components are released under **different licenses** — please check
+the one that applies to what you are using:
+
+| Component | License |
+| --- | --- |
+| Code in this repository | [MIT](LICENSE) |
+| [Sim2Real capture dataset](https://huggingface.co/datasets/RGBench/RGBench-Cloth-Sim2Real-v1) | [CC-BY 4.0](DATA_LICENSE) |
+| [Garment asset library](https://huggingface.co/datasets/RGBench/garment_assets) | RGBench Project-Specific **Non-Commercial** Research License |
+| Robot URDFs in `assets/Urdf/` | Upstream licenses; see per-directory LICENSE / NOTICE |
+
+For the full industrial asset library (4,000+ models) — research
+collaboration or data licensing — contact **wanghmin@gmail.com**
 
 ## Citation
 

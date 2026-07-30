@@ -1,7 +1,7 @@
 # Sample data
 
 A single smoke-test sample lives here once you've run `scripts/download_data.py
---sample-only`. The Hugging Face dataset at `hwk0809/RGBench-Cloth-Sim2Real-v1`
+--sample-only`. The Hugging Face dataset at `RGBench/RGBench-Cloth-Sim2Real-v1`
 provides the full set (9 garments × 3 actions × multiple samples) plus a small
 reference-results subset for cross-validation against published baselines.
 

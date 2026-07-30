@@ -1,6 +1,11 @@
 RGBench Cloth Sim-to-Real Dataset License
 ==========================================
 
+SCOPE: This license applies ONLY to the RGBench Cloth Sim-to-Real capture
+dataset. The RGBench garment asset library
+(https://huggingface.co/datasets/RGBench/garment_assets) is released under a
+separate, non-commercial license and is NOT covered here.
+
 The RGBench Cloth Sim-to-Real dataset (the "Dataset"), including all
 real-world point clouds, RGB-D recordings, robot trajectory CSVs, camera
 calibration files, and reference simulator outputs hosted on Hugging Face

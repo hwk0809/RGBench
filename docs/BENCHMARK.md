@@ -84,7 +84,7 @@ restart from scratch.
 
 The per-garment values in [`configs/cloth_params/*.yaml`](../configs/cloth_params/)
 (stretch, bending, density, friction, damping) were fitted against the
-closed-source GarmentDynamics simulator. The PyBullet, Isaac Sim, and
+not-yet-released GarmentDynamics simulator. The PyBullet, Isaac Sim, and
 plain MuJoCo wrappers ship in this repo as reproducible reference
 implementations — they are not intended as ground-truth oracles, and
 their sim-to-real gap on these parameters will differ from the

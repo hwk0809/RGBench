@@ -18,7 +18,7 @@ Typical use:
 
     # 3. Upload to Hugging Face
     huggingface-cli upload-large-folder \\
-        hwk0809/RGBench-Cloth-Sim2Real-v1 \\
+        RGBench/RGBench-Cloth-Sim2Real-v1 \\
         /tmp/rgbench_hf_upload --repo-type=dataset
 
 The staged layout mirrors the dataset layout the benchmark expects:
@@ -271,7 +271,7 @@ If you only want to fetch the data:
 ```bash
 pip install huggingface_hub
 python -m huggingface_hub.commands.huggingface_cli download \\
-    hwk0809/RGBench-Cloth-Sim2Real-v1 --repo-type dataset \\
+    RGBench/RGBench-Cloth-Sim2Real-v1 --repo-type dataset \\
     --local-dir ./data/sample
 ```
 
@@ -413,7 +413,7 @@ def main() -> int:
         print()
         print("Next:")
         print(f"  huggingface-cli upload-large-folder \\")
-        print(f"      hwk0809/RGBench-Cloth-Sim2Real-v1 \\")
+        print(f"      RGBench/RGBench-Cloth-Sim2Real-v1 \\")
         print(f"      {staging} --repo-type=dataset")
     return 0
 

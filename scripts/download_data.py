@@ -24,7 +24,7 @@ DEFAULT_TARGET = REPO_ROOT / "data" / "sample"
 
 DEFAULT_REPO_ID = os.environ.get(
     "RGBENCH_HF_DATASET",
-    "hwk0809/RGBench-Cloth-Sim2Real-v1",
+    "RGBench/RGBench-Cloth-Sim2Real-v1",
 )
 
 # One capture + its meshes + its reference result — the bare minimum to

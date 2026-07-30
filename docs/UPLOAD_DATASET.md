@@ -21,8 +21,12 @@ huggingface-cli login
 ## 2. Create the dataset repo
 
 ```bash
-huggingface-cli repo create RGBench-Cloth-Sim2Real-v1 --type dataset
+huggingface-cli repo create RGBench/RGBench-Cloth-Sim2Real-v1 --type dataset
 ```
+
+Note the `RGBench/` org prefix — RGBench datasets live under the
+[RGBench organization](https://huggingface.co/RGBench), not a personal
+namespace.
 
 Or via the web UI: <https://huggingface.co/new-dataset>. Public is the
 default and is what the benchmark assumes (`download_data.py` does not
@@ -53,7 +57,7 @@ The script also writes `README.md` (HF dataset card) and `LICENSE`
 
 ```bash
 huggingface-cli upload-large-folder \
-    hwk0809/RGBench-Cloth-Sim2Real-v1 \
+    RGBench/RGBench-Cloth-Sim2Real-v1 \
     /tmp/rgbench_hf_upload \
     --repo-type=dataset
 ```
@@ -74,7 +78,7 @@ Should print the smoke-test capture directory.
 
 ## Versioning
 
-The repo id is `hwk0809/RGBench-Cloth-Sim2Real-v1`. For breaking
+The repo id is `RGBench/RGBench-Cloth-Sim2Real-v1`. For breaking
 changes (new captures, mesh format changes, recalibration) bump the
 suffix (`v2`, `v3`, ...) instead of overwriting v1, so existing papers
 that cite v1 remain reproducible. Minor additions (new garments, more
